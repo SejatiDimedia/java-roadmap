@@ -18,7 +18,7 @@ Berpedoman pada metodologi pembelajaran aktif dengan AI:
 | **03** | **Java Lanjutan**: Collections (List/Set/Map), Exception Handling, Lambda & Stream API, Generics | 4 Minggu | 🟢 Completed |
 | **04** | **Pendukung Backend**: Git Workflow, Maven (`pom.xml`), RDBMS & SQL (`JOIN`, PK/FK), Konsep JDBC | 3-4 Minggu | 🟢 Completed |
 | **05** | **Spring Boot Inti**: IoC & DI, Spring Data JPA, H2 In-Memory DB, Global Exception Handler | 6-8 Minggu | 🟢 Completed |
-| **06** | **Security & Testing**: Unit & Integration Testing (JUnit 5, Mockito), Spring Security + JWT | 4-5 Minggu | 🟡 In Progress |
+| **06** | **Security & Testing**: Unit Testing (JUnit 5, Mockito), OpenAPI/Swagger UI, Spring Security + JWT | 4-5 Minggu | 🟡 In Progress |
 | **07** | **Production Ready**: Containerization (Docker), Caching (Redis), Message Broker, CI/CD | Bertahap | ⚪ Not Started |
 
 ---
@@ -41,8 +41,8 @@ Berpedoman pada metodologi pembelajaran aktif dengan AI:
 │   └── JdbcConceptDemo.java           # Sesi 8: Alur pipa JDBC & mapping ResultSet ke Java Record
 ├── 05-spring-boot-core/            # Project dasar REST API dengan Spring Boot & JPA
 │   ├── IocSimulationDemo.java         # Sesi 9: Simulasi Inversion of Control & Constructor DI
-│   └── belajar-spring/                # Sesi 10-12: Full-stack Spring Boot REST API, JPA, & Unit Test
-│       ├── pom.xml                        # Maven configuration, starter-webmvc, data-jpa, & H2
+│   └── belajar-spring/                # Sesi 10-13: Full-stack Spring Boot REST API, JPA, Test & Swagger
+│       ├── pom.xml                        # Maven configuration, starter-webmvc, data-jpa, H2, & SpringDoc
 │       ├── src/main/java/com/sejatidimedia/belajar_spring/
 │       │   ├── BelajarSpringApplication.java  # Main entry point & CommandLineRunner data seeder
 │       │   ├── HelloController.java           # Basic REST endpoint demo & JSON serialization
@@ -50,7 +50,7 @@ Berpedoman pada metodologi pembelajaran aktif dengan AI:
 │       │   ├── Produk.java                    # JPA @Entity mapping to database table
 │       │   ├── ProdukRepository.java          # Spring Data JPA Repository (auto CRUD)
 │       │   ├── ProdukService.java             # Business logic layer for product domain
-│       │   ├── ProdukController.java          # REST API endpoints (GET, POST, DELETE)
+│       │   ├── ProdukController.java          # REST API endpoints with @Operation & @Tag annotations
 │       │   └── GlobalExceptionHandler.java    # @RestControllerAdvice for clean JSON error responses
 │       └── src/test/java/com/sejatidimedia/belajar_spring/
 │           ├── BelajarSpringApplicationTests.java # Context load test
@@ -70,6 +70,7 @@ Berpedoman pada metodologi pembelajaran aktif dengan AI:
 - **Build Tool:** Maven / Gradle
 - **Database:** H2 (In-Memory), PostgreSQL / MySQL
 - **Testing:** JUnit 5, Mockito
+- **API Documentation:** Swagger / OpenAPI (SpringDoc UI)
 - **Version Control:** Git & GitHub (Conventional Commits)
 
 ---
