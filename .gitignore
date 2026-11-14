@@ -40,3 +40,4 @@ application-secret.yml
 # Log files
 *.log
 logs/
+

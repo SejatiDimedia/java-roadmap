@@ -13,23 +13,28 @@ Berpedoman pada metodologi pembelajaran aktif dengan AI:
 
 | Tahap | Topik Utama | Target Waktu | Status |
 | :---: | :--- | :---: | :---: |
-| **01** | **Dasar Java**: Sintaks, Tipe Data, Kontrol Alur, Method, Array, String | 4-6 Minggu | 🟡 In Progress |
-| **02** | **OOP**: Class & Object, Encapsulation, Inheritance, Polymorphism, Abstract Class, Interface, Enum | 3-4 Minggu | ⚪ Not Started |
-| **03** | **Java Lanjutan**: Collections, Generics, Exception Handling, Lambda & Stream API, Optional, Record, Maven | 4 Minggu | ⚪ Not Started |
+| **01** | **Dasar Java**: Sintaks, Tipe Data, Memory Model (Stack/Heap), String Pool, Array, Method | 4-6 Minggu | 🟢 Completed |
+| **02** | **OOP**: Class & Object, Encapsulation, Record, Inheritance, Polymorphism, Interface | 3-4 Minggu | 🟡 In Progress |
+| **03** | **Java Lanjutan**: Collections (List/Set/Map), Exception Handling, Lambda & Stream API, Generics | 4 Minggu | 🟡 In Progress |
 | **04** | **Pendukung Backend**: Git Workflow, HTTP & REST Fundamentals, RDBMS/SQL, Dasar JDBC | 3-4 Minggu | ⚪ Not Started |
-| **05** | **Spring Boot Inti**: IoC & DI, Layered Architecture (Controller-Service-Repository), Spring Data JPA, DTO & Validation | 6-8 Minggu | ⚪ Not Started |
-| **06** | **Security & Testing**: Spring Security + JWT, Unit & Integration Testing (JUnit 5, Mockito), OpenAPI/Swagger | 4-5 Minggu | ⚪ Not Started |
-| **07** | **Production Ready**: Containerization (Docker), Caching (Redis), Message Broker, CI/CD, Deployment | Bertahap | ⚪ Not Started |
+| **05** | **Spring Boot Inti**: IoC & DI, Layered Architecture (Controller-Service-Repository), JPA, DTO | 6-8 Minggu | ⚪ Not Started |
+| **06** | **Security & Testing**: Spring Security + JWT, Unit & Integration Testing (JUnit 5, Mockito) | 4-5 Minggu | ⚪ Not Started |
+| **07** | **Production Ready**: Containerization (Docker), Caching (Redis), Message Broker, CI/CD | Bertahap | ⚪ Not Started |
 
 ---
 
-## 📂 Struktur Repositori
+## 📂 Struktur Repositori & Log Belajar
 
 ```text
 .
-├── 01-dasar-java/              # Latihan sintaks, tipe data, logika & algoritma dasar
-├── 02-oop/                     # Implementasi konsep Object-Oriented Programming
-├── 03-java-lanjutan/           # Collections, Streams, Generics, build tools (Maven/Gradle)
+├── 01-dasar-java/              # Latihan sintaks, memory model, exception, & stream API
+│   ├── VerifikasiPassword.java    # Sesi 1: Perbandingan memori (== vs .equals()) & String Pool
+│   ├── ManajemenDataSiswa.java    # Sesi 2: Implementasi List, Set (anti-duplikat), & Map
+│   ├── BankTransfer.java          # Sesi 3: Defensive validation & custom exception throwing
+│   └── FilterTransaksi.java       # Sesi 4: Record, Stream API (filter, map, mapToDouble, sum)
+├── 02-oop/                     # Implementasi OOP & Arsitektur Service
+│   └── ManajemenBukuApp.java      # Sesi 5: Mini Project integrasi OOP + Collections + Stream
+├── 03-java-lanjutan/           # Collections lanjutan, Generics, build tools (Maven/Gradle)
 ├── 04-backend-prerequisites/   # Latihan query SQL, JDBC, simulasi REST client
 ├── 05-spring-boot-core/        # Project dasar REST API dengan Spring Boot & JPA
 ├── 06-security-testing/        # Implementasi JWT auth & automated testing
@@ -42,7 +47,7 @@ Berpedoman pada metodologi pembelajaran aktif dengan AI:
 
 ## 🛠️ Tech Stack & Tools
 
-- **Language:** Java 21 (LTS)
+- **Language:** Java 17 / 21 (LTS)
 - **Framework:** Spring Boot 3.x
 - **Build Tool:** Maven / Gradle
 - **Database:** PostgreSQL / MySQL
