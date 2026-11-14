@@ -16,8 +16,8 @@ Berpedoman pada metodologi pembelajaran aktif dengan AI:
 | **01** | **Dasar Java**: Sintaks, Tipe Data, Memory Model (Stack/Heap), String Pool, Array, Method | 4-6 Minggu | 🟢 Completed |
 | **02** | **OOP**: Class & Object, Encapsulation, Record, Inheritance, Polymorphism, Interface & Loose Coupling | 3-4 Minggu | 🟢 Completed |
 | **03** | **Java Lanjutan**: Collections (List/Set/Map), Exception Handling, Lambda & Stream API, Generics | 4 Minggu | 🟢 Completed |
-| **04** | **Pendukung Backend**: Git Workflow, Maven (`pom.xml`), RDBMS & SQL (`JOIN`, PK/FK), Konsep JDBC | 3-4 Minggu | 🟡 In Progress |
-| **05** | **Spring Boot Inti**: Inversion of Control (IoC), Dependency Injection (DI), Spring Beans | 6-8 Minggu | 🟡 In Progress |
+| **04** | **Pendukung Backend**: Git Workflow, Maven (`pom.xml`), RDBMS & SQL (`JOIN`, PK/FK), Konsep JDBC | 3-4 Minggu | 🟢 Completed |
+| **05** | **Spring Boot Inti**: Inversion of Control (IoC), Dependency Injection (DI), REST Controller, Service Layer | 6-8 Minggu | 🟡 In Progress |
 | **06** | **Security & Testing**: Spring Security + JWT, Unit & Integration Testing (JUnit 5, Mockito) | 4-5 Minggu | ⚪ Not Started |
 | **07** | **Production Ready**: Containerization (Docker), Caching (Redis), Message Broker, CI/CD | Bertahap | ⚪ Not Started |
 
@@ -40,7 +40,13 @@ Berpedoman pada metodologi pembelajaran aktif dengan AI:
 │   ├── SqlSchemaPractice.sql          # Sesi 8: Relasi tabel PK/FK, INSERT, & INNER JOIN
 │   └── JdbcConceptDemo.java           # Sesi 8: Alur pipa JDBC & mapping ResultSet ke Java Record
 ├── 05-spring-boot-core/            # Project dasar REST API dengan Spring Boot & JPA
-│   └── IocSimulationDemo.java         # Sesi 9: Simulasi Inversion of Control & Constructor DI
+│   ├── IocSimulationDemo.java         # Sesi 9: Simulasi Inversion of Control & Constructor DI
+│   └── belajar-spring/                # Sesi 10: Live Spring Boot 3.x Project (REST API)
+│       ├── pom.xml                        # Maven configuration & starter-web
+│       └── src/main/java/com/sejatidimedia/belajar_spring/
+│           ├── BelajarSpringApplication.java  # Main entry point & embedded Tomcat runner
+│           ├── HelloController.java           # @RestController & JSON response mappings
+│           └── ProfilService.java             # @Service layer with business logic & DI
 ├── 06-security-testing/            # Implementasi JWT auth & automated testing
 ├── 07-cloud-microservices/         # Konfigurasi Docker, Redis, CI/CD pipelines
 ├── doc_belajar_java.md             # Kumpulan prompt mentor AI & pedoman belajar
