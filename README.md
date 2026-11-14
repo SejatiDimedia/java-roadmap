@@ -18,7 +18,7 @@ Berpedoman pada metodologi pembelajaran aktif dengan AI:
 | **03** | **Java Lanjutan**: Collections (List/Set/Map), Exception Handling, Lambda & Stream API, Generics | 4 Minggu | 🟢 Completed |
 | **04** | **Pendukung Backend**: Git Workflow, Maven (`pom.xml`), RDBMS & SQL (`JOIN`, PK/FK), Konsep JDBC | 3-4 Minggu | 🟢 Completed |
 | **05** | **Spring Boot Inti**: IoC & DI, Spring Data JPA, H2 In-Memory DB, Global Exception Handler | 6-8 Minggu | 🟢 Completed |
-| **06** | **Security & Testing**: Unit Testing (JUnit 5, Mockito), OpenAPI/Swagger UI, Spring Security + JWT | 4-5 Minggu | 🟡 In Progress |
+| **06** | **Security & Testing**: Unit Testing (JUnit 5, Mockito), Swagger/OpenAPI UI, Spring Security + JWT | 4-5 Minggu | 🟢 Completed |
 | **07** | **Production Ready**: Containerization (Docker), Caching (Redis), Message Broker, CI/CD | Bertahap | ⚪ Not Started |
 
 ---
@@ -41,8 +41,8 @@ Berpedoman pada metodologi pembelajaran aktif dengan AI:
 │   └── JdbcConceptDemo.java           # Sesi 8: Alur pipa JDBC & mapping ResultSet ke Java Record
 ├── 05-spring-boot-core/            # Project dasar REST API dengan Spring Boot & JPA
 │   ├── IocSimulationDemo.java         # Sesi 9: Simulasi Inversion of Control & Constructor DI
-│   └── belajar-spring/                # Sesi 10-13: Full-stack Spring Boot REST API, JPA, Test & Swagger
-│       ├── pom.xml                        # Maven configuration, starter-webmvc, data-jpa, H2, & SpringDoc
+│   └── belajar-spring/                # Sesi 10-15: Full-stack Spring Boot REST API, JPA, Test, Swagger, & Security
+│       ├── pom.xml                        # Maven config: webmvc, data-jpa, H2, springdoc, security, jjwt
 │       ├── src/main/java/com/sejatidimedia/belajar_spring/
 │       │   ├── BelajarSpringApplication.java  # Main entry point & CommandLineRunner data seeder
 │       │   ├── HelloController.java           # Basic REST endpoint demo & JSON serialization
@@ -51,11 +51,15 @@ Berpedoman pada metodologi pembelajaran aktif dengan AI:
 │       │   ├── ProdukRepository.java          # Spring Data JPA Repository (auto CRUD)
 │       │   ├── ProdukService.java             # Business logic layer for product domain
 │       │   ├── ProdukController.java          # REST API endpoints with @Operation & @Tag annotations
-│       │   └── GlobalExceptionHandler.java    # @RestControllerAdvice for clean JSON error responses
+│       │   ├── GlobalExceptionHandler.java    # @RestControllerAdvice for clean JSON error responses
+│       │   ├── JwtUtil.java                   # Sesi 15: Generator & validator cryptographic HMAC-SHA256 JWT
+│       │   ├── JwtFilter.java                 # Sesi 15: OncePerRequestFilter for Bearer token inspection
+│       │   ├── SecurityConfig.java            # Sesi 15: SecurityFilterChain, stateless session, public/auth routes
+│       │   └── AuthController.java            # Sesi 15: POST /api/auth/login endpoint issuing JWT tokens
 │       └── src/test/java/com/sejatidimedia/belajar_spring/
 │           ├── BelajarSpringApplicationTests.java # Context load test
 │           └── ProdukServiceTest.java             # Sesi 12: Automated Unit Testing dengan Mockito
-├── 06-security-testing/            # Implementasi JWT auth & automated testing
+├── 06-security-testing/            # Catatan implementasi JWT auth & automated testing
 ├── 07-cloud-microservices/         # Konfigurasi Docker, Redis, CI/CD pipelines
 ├── doc_belajar_java.md             # Kumpulan prompt mentor AI & pedoman belajar
 └── README.md
@@ -67,10 +71,11 @@ Berpedoman pada metodologi pembelajaran aktif dengan AI:
 
 - **Language:** Java 17 / 21 (LTS)
 - **Framework:** Spring Boot 3.x / 4.x
-- **Build Tool:** Maven / Gradle
+- **Security:** Spring Security, JWT (JJWT)
 - **Database:** H2 (In-Memory), PostgreSQL / MySQL
 - **Testing:** JUnit 5, Mockito
 - **API Documentation:** Swagger / OpenAPI (SpringDoc UI)
+- **Build Tool:** Maven Wrapper (`mvnw`)
 - **Version Control:** Git & GitHub (Conventional Commits)
 
 ---
