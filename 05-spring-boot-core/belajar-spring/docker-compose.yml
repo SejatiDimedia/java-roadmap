@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # 1. SERVICE APLIKASI SPRING BOOT KITA
+  backend:
+    build: .
+    container_name: belajar-spring-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SERVER_PORT=8080
+    restart: always
+
+  # 2. SERVICE DATABASE POSTGRESQL (Siap Produksi)
+  postgres-db:
+    image: postgres:16-alpine
+    container_name: belajar-spring-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=tokodb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=rahasia
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres_data:

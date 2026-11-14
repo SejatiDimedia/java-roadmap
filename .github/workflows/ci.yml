@@ -1,0 +1,29 @@
+name: Java Backend CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup Java 17
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Beri Izin Eksekusi Maven Wrapper
+      run: chmod +x 05-spring-boot-core/belajar-spring/mvnw
+
+    - name: Jalankan Automated Unit Test dengan Mockito
+      run: |
+        cd 05-spring-boot-core/belajar-spring
+        ./mvnw test
